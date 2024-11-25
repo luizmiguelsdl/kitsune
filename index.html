@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <title>Salão Kitsune</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <p>PÁGINA INICIAL</p>
+        <p>SERVIÇOS</p>
+        <p>SOBRE</p>
+        <p>CONTATO</p>
+    </nav>
+    <button class="back-to-top" id="backToTop"><img src="backToTop.svg" alt="" srcset=""></button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <header id="headModal">
+                <h2>Realizar agendamento</h2>
+                <p>Do que você vai cuidar hoje?</p>
+            </header>
+
+            <div class="radio-input" id="mainOptions">
+                <label class="label">
+                    <input type="radio" id="value-1" name="value-radio" value="Hair" />
+                    <p class="text">Cabelo</p>
+                </label>
+                <label class="label">
+                    <input type="radio" id="value-2" name="value-radio" value="Make" />
+                    <p class="text">Pele / Maquiagem</p>
+                </label>
+
+            </div>
+            <div class="buttonsPage" id="subButton">
+                <button id="backButton" class="backButton">Voltar</button>
+                <button id="nextButton" class="nextButton">Continuar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <p class="mainTitle imperial-script-regular">Bem vindo ao <br> <span>KITSUNE</span></p>
+        <p class="subtitle">O Salão Kistune é um espaço sofisticado que oferece atendimento personalizado, focado em
+            realçar a beleza natural dos clientes. Com uma equipe eficiente e harmoniosa, proporciona uma experiência
+            relaxante em todos os serviços, priorizando o bem-estar e a autoestima.</p>
+        <button class="schedule" id="openModal">Agendar Horário</button>
+        <nav class="social">
+            <a href="https://www.whatsapp.com">
+                <img src="whatsapp.svg" alt="" srcset="">
+            </a>
+            <a href="https://www.instagram.com">
+                <img src="instagram.svg" alt="" srcset="">
+            </a>
+            <a href="https://www.facebook.com">
+                <img src="facebook.svg" alt="" srcset="">
+            </a>
+            <a href="https://www.x.com">
+                <img src="twitter.svg" alt="" srcset="">
+            </a>
+        </nav>
+    </header>
+    <section class="sec">
+        <h1>Todos os Serviços</h1>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Corte</h3>
+                <ul>
+                    <li>Corte feminino</li>
+                    <li>Corte masculino</li>
+                    <li>Corte infantil</li>
+                    <li>Corte franja</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <h3>Coloração</h3>
+                <ul>
+                    <li>Permanente – com amônia e sem amônia</li>
+                    <li>Semi permanente – sem amônia</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <h3>Escova</h3>
+                <ul>
+                    <li>Lisa</li>
+                    <li>Waves</li>
+                    <li>Secagem</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <h3>Alisamento</h3>
+                <ul>
+                    <li>Definitivo – com amônia</li>
+                    <li>Temporário – com ácidos</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <h3>Terapia Capilar</h3>
+                <ul>
+                    <li>Algoterapia</li>
+                    <li>Detox couro cabeludo</li>
+                    <li>Argiloterapia</li>
+                    <li>Selagem Térmica</li>
+                    <li>CPR – Sensciense</li>
+                    <li>Nutrição Capilar</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <h3>Penteado</h3>
+                <ul>
+                    <li>Simples – waves e semi preso</li>
+                    <li>Completo – todo preso</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <h3>Maquiagem</h3>
+                <ul>
+                    <li>Sem cílios postiços</li>
+                    <li>Com cílios postiços</li>
+                    <li>Express</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <h3>Sobrancelhas</h3>
+                <ul>
+                    <li>Design simples</li>
+                    <li>Design com henna</li>
+                    <li>Micropigmentação (flowbrows)</li>
+                    <li>Fio a fio</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <h3>Depilação</h3>
+                <ul>
+                    <li>Fazemos todas as regiões do corpo</li>
+                    <li>Produtos descartáveis</li>
+                </ul>
+            </div>
+        </div>
+        <img src="kitsuneLogo.png" alt="" srcset="" style="margin-top: 50px;">
+    </section>
+
+    <section class="sec1">
+        <div class="slider-container">
+            <div class="slider">
+                <img src="corte.png" alt="Imagem 1">
+                <img src="coloração.png" alt="Imagem 2">
+                <img src="escova.png" alt="Imagem 3">
+                <img src="maquiagem.png" alt="Imagem 4">
+                <img src="sombrancelha.png" alt="Imagem 5">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="sec2">
+        <img src="sobre.png" alt="" srcset="">
+        <main class="about">
+            <h2 class="imperial-script-regular">Sobre <br><span>KITSUNE</span></h2>
+            <p>O Salão Kitsune é sinônimo de elegância e cuidado. Aqui, cada visita se transforma em uma experiência única e agradável, onde o bem-estar é nossa prioridade. Com um design que combina o minimalismo à arte, criamos um ambiente sofisticado e acolhedor. Nossa equipe é dedicada a oferecer um atendimento excepcional, sempre atenta às necessidades de cada cliente, garantindo que suas expectativas sejam superadas em cada visita.</p>
+        </main>
+    </section>
+
+    <footer>
+        <div class="divsao">
+            <img src="kitsuneLogo2.png" alt="" srcset="">
+            <p style="text-align: justify;">O Salão Kitsune é sinônimo de elegância e cuidado. Aqui, cada visita se transforma em uma experiência única e agradável, onde o bem-estar é nossa prioridade. </p>
+        </div>
+        <div class="divsao">
+            <div>
+                <h2>Estacionamento</h2>
+                <p>Estacionamento Subterrâneo com Segurança</p>
+            </div>
+            <div>
+                <h2>Horários</h2>
+                <p>Terça a sábado – 13h às 19h</p>
+            </div>
+        </div>
+        <div class="divsao">
+            <ul>
+                <h2>Contato</h2>
+                <li>Av. Pimentel Gomes, 214 - Cohab I</li>
+                <li>(82) 9 40028922/ 19757855</li>
+                <li>contato@kitsune.com.br</li>
+            </ul>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.5121480965136!2d-35.73745782395832!3d-9.551043590532627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70147f933f998af%3A0xfe79e31e2bb00e8d!2sCentro%20de%20Educa%C3%A7%C3%A3o%20e%20Tecnologia%20Sesi!5e0!3m2!1spt-BR!2sbr!4v1732475515033!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <nav class="social">
+            <a href="https://www.whatsapp.com">
+                <img src="whatsapp.svg" alt="" srcset="">
+            </a>
+            <a href="https://www.instagram.com">
+                <img src="instagram.svg" alt="" srcset="">
+            </a>
+            <a href="https://www.facebook.com">
+                <img src="facebook.svg" alt="" srcset="">
+            </a>
+            <a href="https://www.x.com">
+                <img src="twitter.svg" alt="" srcset="">
+            </a>
+        </nav>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

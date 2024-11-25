@@ -1,0 +1,214 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.8px);
+    -webkit-backdrop-filter: blur(2.8px);
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 24px;
+    min-width: 200px;
+    min-height: 200px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    animation: slideUp 0.5s ease-out;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.buttonsPage{
+    width: 360px;
+    display: flex;
+    gap: 10px;
+}
+.buttonsPage button{
+    width: 100%;
+    height: clamp(20px, 7vh, 3.8rem);
+
+    border: none;
+    border-radius: 14px;
+
+    font-size: clamp(16px, 1vw, 1.4rem);
+    font-weight: bold;
+}
+
+.backButton{
+    display: none;
+    cursor: pointer;
+}
+
+.nextButton{
+    background-color: #528a5e;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+
+/* RADIO INPUT */
+
+.radio-input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.radio-input * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.radio-input .label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0px 20px;
+    width: 360px;
+    cursor: pointer;
+    height: 7vh;
+    position: relative;
+    z-index: 2;
+}
+
+.radio-input .label::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 7vh;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: 14px;
+    border: 2px solid #EFEFEF;
+    background-color: #fafafa;
+}
+
+.radio-input .label:hover::before {
+    transition: all 0.2s ease;
+    background-color: #5d846521;
+}
+
+.radio-input .label:has(input:checked)::before {
+    background-color: #5d84652f;
+    border-color: #5d846542;
+    height: 7vh;
+}
+
+.radio-input .label .text {
+    color: #3F3F3F;
+    font-size: clamp(16px, 1vw, 1.2rem);
+    font-weight: bold;
+    z-index: 5;
+}
+
+.radio-input .label input {
+    background-color: #ffffff;
+    border: 2px solid #B9CEBD;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.radio-input .label input:checked {
+    background-color: #fff;
+    -webkit-animation: puls 0.7s forwards;
+    animation: pulse 0.7s forwards;
+    z-index: 5;
+}
+
+.radio-input .label input:before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    border-radius: 20%;
+    transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: #5D8465;
+    transform: scale(0);
+}
+
+.radio-input .label input:checked::before {
+    transform: scale(1);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #5d84653f;
+    }
+
+    70% {
+        box-shadow: 0 0 0 8px #5d84653f;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 #5d84653f;
+    }
+}
+
+.signLabel{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.signInput{
+    width: 100%;
+    height: clamp(20px, 5.5vh, 3.8rem);
+
+    border-radius: 12px;
+    border: 2px solid #EFEFEF;
+    background-color: #fafafa;
+    padding-left: 15px;
+}
+
+#termCheck{
+    background-color: none;
+    border: none;
+}
